@@ -22,7 +22,7 @@ The data is provided on the South African crime statistics between the year 2011
 
 The data was processed as follows, so as to yield the desired visuals and information.
 ***
-##### I) The data is tabulated annually against the category of the criminal offense (R-Studio)
+### I) The data is tabulated annually against the category of the criminal offense (R-Studio)
 
 In R Studio, we observe the categorically South African crimes
 
@@ -35,13 +35,13 @@ View(crime_incidents_by_category)
 
 ![](https://github.com/msizimkhize/-South-African-Crime-Statistics-Comparative-Analysis-Project/raw/refs/heads/main/R%20Studio/1_uyEXe9u6BuJDCbXntketKQ.webp)
 ***
-##### II) The dataset is visualised over the entire span of the 2011–2023 term (**Tableau**)
+### II) The dataset is visualised over the entire span of the 2011–2023 term (**Tableau**)
 
 ![](https://github.com/msizimkhize/-South-African-Crime-Statistics-Comparative-Analysis-Project/raw/refs/heads/main/Tableau/1_mhBaXiczppWcKm6kfXsUog.webp)
 
 ![](https://github.com/msizimkhize/-South-African-Crime-Statistics-Comparative-Analysis-Project/raw/refs/heads/main/Tableau/1_6GeFBiJhKD6OGksRE1rSYw.webp)
 ***
-#### Insights and Conclusion
+## Insights and Conclusion
 
 A comprehensive observation of the data reveals that serious crimes, of which human trafficking is implicated, are of the greatest contributors toward crime in South Africa. Overall, these numbers have remained rather steady, with a mild decline toward the latter phase.
 
