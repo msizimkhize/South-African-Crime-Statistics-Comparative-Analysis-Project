@@ -59,7 +59,7 @@ df2[df2.notnull()].head(15)
 df2[df2.notnull()].to_csv("crime_incidents_za.csv")
 ```
 
-![](https://github.com/msizimkhize/South-African-Crime-Statistics-Comparative-Analysis-Project/blob/main/IMG/7_01_04_47.png?raw=true)
+![](https://github.com/msizimkhize/South-African-Crime-Statistics-Comparative-Analysis-Project/blob/main/Python%20(Notebook)/7_01_04_47.png?raw=true)
 
 ```
 #We further filter the data based on crime category
