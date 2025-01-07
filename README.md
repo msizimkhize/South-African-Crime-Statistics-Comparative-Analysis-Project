@@ -52,8 +52,12 @@ df[df.notnull()].head(15)
 
 df.to_csv("crime_incidents_za.csv")
 ```
-The dataset crime_incidents_za.csv is rendered
+
 ![](https://github.com/msizimkhize/South-African-Crime-Statistics-Comparative-Analysis-Project/blob/main/IMG/7_01_04_47.png?raw=true)
+
+```
+#We further filter the data based on crime category
+```
 
 ***
 ### II) The dataset is visualised over the entire span of the 2011–2023 term (**Tableau**)
