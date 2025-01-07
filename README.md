@@ -34,7 +34,7 @@ View(crime_incidents_by_category)
 ```
 ![](https://github.com/msizimkhize/-South-African-Crime-Statistics-Comparative-Analysis-Project/raw/refs/heads/main/R%20Studio/1_uyEXe9u6BuJDCbXntketKQ.webp)
 
-We now run the equivalent python code
+We now run the similar python code
 
 ```
 import pandas as pd
