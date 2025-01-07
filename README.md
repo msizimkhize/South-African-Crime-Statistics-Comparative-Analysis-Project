@@ -47,10 +47,12 @@ df.head(15)
 df[df["Geography"] == "ZA"]
 df.head(15)
 
+df[df["Geography"] == "ZA"].to_csv("crime_incidents_za.csv")
+
 #filter out null values
 df[df.notnull()].head(15)
 
-df.to_csv("crime_incidents_za.csv")
+df2[df2.notnull()].to_csv("crime_incidents_za.csv")
 ```
 
 ![](https://github.com/msizimkhize/South-African-Crime-Statistics-Comparative-Analysis-Project/blob/main/IMG/7_01_04_47.png?raw=true)
