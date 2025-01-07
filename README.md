@@ -44,7 +44,7 @@ df = pd.read_csv("crime_incidents_by_category.csv")
 df.head(15)
 
 #filter rows based on location
-df[df['Geography'] == 'ZA']
+df[df["Geography"] == "ZA"]
 df.head(15)
 
 #filter out null values
