@@ -80,6 +80,11 @@ df2.head(15)
 ```
 ![](https://github.com/msizimkhize/South-African-Crime-Statistics-Comparative-Analysis-Project/blob/main/Python%20(Notebook)/7_04_08_42.png?raw=true)
 
+```
+#outliers are removed
+df2[df2['Count'] < df2['Count'].quantile(0.99)]
+df2.to_csv("crime_incidents_za.csv")
+```
 
 ***
 ### II) The dataset is visualised over the entire span of the 2011–2023 term (**Tableau**)
