@@ -36,7 +36,7 @@ View(crime_incidents_by_category)
 
 We now run the equivalent python code
 
-'''
+```
 import pandas as pd
 
 #load the dataset
@@ -48,7 +48,7 @@ df[df['Geography'] == 'ZA']
 df.head(15)
 
 df.to_csv("crimes_incidents_za.csv")
-'''
+```
 
 ***
 ### II) The dataset is visualised over the entire span of the 2011–2023 term (**Tableau**)
