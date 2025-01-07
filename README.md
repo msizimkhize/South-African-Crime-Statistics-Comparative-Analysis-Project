@@ -74,6 +74,9 @@ df2[["Crime Category", "Count"]].to_csv("crime_incidents_za.csv")
 
 #we update the dataframe df2
 df2 = pd.read_csv("crime_incidents_za.csv")
+
+#we preview the dataframe df2
+df2.head(15)
 ```
 
 ***
