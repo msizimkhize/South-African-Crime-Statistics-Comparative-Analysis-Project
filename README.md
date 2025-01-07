@@ -34,7 +34,7 @@ View(crime_incidents_by_category)
 ```
 ![](https://github.com/msizimkhize/-South-African-Crime-Statistics-Comparative-Analysis-Project/raw/refs/heads/main/R%20Studio/1_uyEXe9u6BuJDCbXntketKQ.webp)
 
-We now run the similar python code
+We now filter and clean the dataset using the following Python code
 
 ```
 import pandas as pd
@@ -47,11 +47,15 @@ df.head(15)
 df[df["Geography"] == "ZA"]
 df.head(15)
 
+#we derive a new useful dataset
 df[df["Geography"] == "ZA"].to_csv("crime_incidents_za.csv")
 
-#filter out null values
-df[df.notnull()].head(15)
+#we now establish the new data frame
+df2 = pd.read_csv("crime_incidents_za.csv")
+df2.head(15)
 
+#filter out null values
+df2[df2.notnull()].head(15)
 df2[df2.notnull()].to_csv("crime_incidents_za.csv")
 ```
 
