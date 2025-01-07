@@ -65,6 +65,9 @@ df2[df2.notnull()].to_csv("crime_incidents_za.csv")
 #We further filter the data based on crime category
 df2[df2["Crime Category"] == "Other Serious Crimes"].head(15)
 df2[df2["Crime Category"] == "Other Serious Crimes"].to_csv("crime_incidents_za.csv")
+
+#we finally select the columns of special interest
+df2[["Crime Category", "Count"]].to_csv("crime_incidents_za.csv")
 ```
 
 ***
