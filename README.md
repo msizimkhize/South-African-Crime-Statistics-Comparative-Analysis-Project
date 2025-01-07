@@ -50,8 +50,10 @@ df.head(15)
 #filter out null values
 df[df.notnull()].head(15)
 
-df.to_csv("crimes_incidents_za.csv")
+df.to_csv("crime_incidents_za.csv")
 ```
+The dataset crime_incidents_za.csv is rendered
+![]([https://github.com/msizimkhize/-South-African-Crime-Statistics-Comparative-Analysis-Project/raw/refs/heads/main/R%20Studio/1_uyEXe9u6BuJDCbXntketKQ.webp](https://github.com/msizimkhize/South-African-Crime-Statistics-Comparative-Analysis-Project/blob/main/IMG/7_01_04_47.png?raw=true))
 
 ***
 ### II) The dataset is visualised over the entire span of the 2011–2023 term (**Tableau**)
