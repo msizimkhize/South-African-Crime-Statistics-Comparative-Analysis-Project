@@ -24,7 +24,7 @@ The data was processed as follows, so as to yield the desired visuals and inform
 ***
 ### I) The data is tabulated annually against the category of the criminal offense
 
-In R Studio, we observe and manually filter the categorically South African (ZA) crimes
+In R Studio, we browse and manually filter the categorically South African (ZA) crimes
 
 ```
 library(readr)
