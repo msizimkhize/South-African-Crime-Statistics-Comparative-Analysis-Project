@@ -47,6 +47,9 @@ df.head(15)
 df[df['Geography'] == 'ZA']
 df.head(15)
 
+#filter out null values
+df[df.notnull()].head(15)
+
 df.to_csv("crimes_incidents_za.csv")
 ```
 
