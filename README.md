@@ -78,6 +78,8 @@ df2 = pd.read_csv("crime_incidents_za.csv")
 #we preview the dataframe df2
 df2.head(15)
 ```
+![](https://github.com/user-attachments/assets/983ff0f6-c5e7-4dfe-9eab-9580e6bcf88d)
+
 
 ***
 ### II) The dataset is visualised over the entire span of the 2011–2023 term (**Tableau**)
