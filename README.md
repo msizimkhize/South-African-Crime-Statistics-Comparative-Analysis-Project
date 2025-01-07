@@ -16,15 +16,15 @@ The data was prepared:
 
 The data is indeed limited, in that it only spans the eleven-year period. The data had to remain encrypted and entirely anonymous, as to ensure safety for the persons who reported the crimes herein contained.
 
-The data presented as a CSV is accessible and credible: R Studio was used for the purpose of tabulating it.
+The data presented as a CSV is accessible and credible: R Studio was used for the purpose of preprocessing it.
 
 The data is provided on the South African crime statistics between the year 2011 and 2023. The parameters, by criterion, will be tabulated in this report, based on the nature and demographics of the crime.
 
 The data was processed as follows, so as to yield the desired visuals and information.
 ***
-### I) The data is tabulated annually against the category of the criminal offense (R-Studio)
+### I) The data is tabulated annually against the category of the criminal offense
 
-In R Studio, we observe the categorically South African crimes
+In R Studio, we observe and manually filter the categorically South African (ZA) crimes
 
 ```
 library(readr)
@@ -32,8 +32,24 @@ library(readr)
 crime_incidents_by_category <- read_csv("Downloads/crime_incidents_by_category.csv")
 View(crime_incidents_by_category) 
 ```
-
 ![](https://github.com/msizimkhize/-South-African-Crime-Statistics-Comparative-Analysis-Project/raw/refs/heads/main/R%20Studio/1_uyEXe9u6BuJDCbXntketKQ.webp)
+
+We now run the equivalent python code
+
+'''
+import pandas as pd
+
+#load the dataset
+df = pd.read_csv("crime_incidents_by_category.csv")
+df.head(15)
+
+#filter rows based on location
+df[df['Geography'] == 'ZA']
+df.head(15)
+
+df.to_csv("crimes_incidents_za.csv")
+'''
+
 ***
 ### II) The dataset is visualised over the entire span of the 2011–2023 term (**Tableau**)
 
