@@ -84,13 +84,13 @@ df2.head(15)
 #outliers are removed
 df2[df2['Count'] < df2['Count'].quantile(0.99)]
 df2.to_csv("crime_incidents_za.csv")
-```
 
-```
 #we render a statistical summary
 df2 = pd.read_csv("crime_incidents_za.csv")
 df2[["Count"]].describe()
 ```
+
+![](https://github.com/user-attachments/assets/80a272bb-5e37-4cd4-8508-3efaa0c59279)
 
 ***
 ### II) The dataset is visualised over the entire span of the 2011–2023 term (**Tableau**)
