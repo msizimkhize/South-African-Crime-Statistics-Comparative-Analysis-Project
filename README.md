@@ -86,6 +86,12 @@ df2[df2['Count'] < df2['Count'].quantile(0.99)]
 df2.to_csv("crime_incidents_za.csv")
 ```
 
+```
+#we render a statistical summary
+df2 = pd.read_csv("crime_incidents_za.csv")
+df2[["Count"]].describe()
+```
+
 ***
 ### II) The dataset is visualised over the entire span of the 2011–2023 term (**Tableau**)
 
