@@ -90,7 +90,7 @@ df2 = pd.read_csv("crime_incidents_za.csv")
 df2[["Count"]].describe()
 ```
 
-![](https://github.com/user-attachments/assets/80a272bb-5e37-4cd4-8508-3efaa0c59279)
+![](https://github.com/msizimkhize/South-African-Crime-Statistics-Comparative-Analysis-Project/blob/main/IMG/400989899-80a272bb-5e37-4cd4-8508-3efaa0c59279.png?raw=true)
 
 ***
 ### II) The dataset is visualised over the entire span of the 2011–2023 term (**Tableau**)
