@@ -32,7 +32,7 @@ library(readr)
 crime_incidents_by_category <- read_csv("Downloads/crime_incidents_by_category.csv")
 View(crime_incidents_by_category) 
 ```
-![](https://github.com/msizimkhize/-South-African-Crime-Statistics-Comparative-Analysis-Project/raw/refs/heads/main/R%20Studio/1_uyEXe9u6BuJDCbXntketKQ.webp)
+![](https://github.com/msizimkhize/South-African-Crime-Statistics-Comparative-Analysis-Project/blob/main/IMG/1_uyEXe9u6BuJDCbXntketKQ.png?raw=true)
 
 We now filter and clean the dataset using the following Python code
 
@@ -59,7 +59,7 @@ df2[df2.notnull()].head(15)
 df2[df2.notnull()].to_csv("crime_incidents_za.csv")
 ```
 
-![](https://github.com/msizimkhize/South-African-Crime-Statistics-Comparative-Analysis-Project/blob/main/Python%20(Notebook)/7_01_04_47.png?raw=true)
+![](https://github.com/msizimkhize/South-African-Crime-Statistics-Comparative-Analysis-Project/blob/main/IMG/7_01_04_47.png?raw=true)
 
 ```
 #We further filter the data based on crime category
@@ -78,7 +78,7 @@ df2 = pd.read_csv("crime_incidents_za.csv")
 #we preview the dataframe df2
 df2.head(15)
 ```
-![](https://github.com/msizimkhize/South-African-Crime-Statistics-Comparative-Analysis-Project/blob/main/Python%20(Notebook)/7_04_08_42.png?raw=true)
+![](https://github.com/msizimkhize/South-African-Crime-Statistics-Comparative-Analysis-Project/blob/main/IMG/7_04_08_42.png?raw=true)
 
 ```
 #outliers are removed
@@ -95,9 +95,9 @@ df2[["Count"]].describe()
 ***
 ### II) The dataset is visualised over the entire span of the 2011–2023 term (**Tableau**)
 
-![](https://github.com/msizimkhize/-South-African-Crime-Statistics-Comparative-Analysis-Project/raw/refs/heads/main/Tableau/1_mhBaXiczppWcKm6kfXsUog.webp)
+![](https://github.com/msizimkhize/South-African-Crime-Statistics-Comparative-Analysis-Project/blob/main/IMG/1_mhBaXiczppWcKm6kfXsUog.png?raw=true)
 
-![](https://github.com/msizimkhize/-South-African-Crime-Statistics-Comparative-Analysis-Project/raw/refs/heads/main/Tableau/1_6GeFBiJhKD6OGksRE1rSYw.webp)
+![](https://github.com/msizimkhize/South-African-Crime-Statistics-Comparative-Analysis-Project/blob/main/IMG/1_6GeFBiJhKD6OGksRE1rSYw.png?raw=true)
 ***
 ## Insights and Conclusion
 
