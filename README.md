@@ -34,6 +34,20 @@ View(crime_incidents_by_category)
 ```
 ![](https://github.com/msizimkhize/South-African-Crime-Statistics-Comparative-Analysis-Project/blob/main/IMG/1_uyEXe9u6BuJDCbXntketKQ.png?raw=true)
 
+The table is also obtained using the R code below.
+```
+install.packages("readr", dependencies = TRUE)
+install.packages("dplyr", dependencies = TRUE)
+
+library(readr)
+library(dplyr)
+
+df1 <- crime_incidents_by_category %>%
+ filter (Geography == 'ZA')
+
+head(df1, 12)
+```
+
 We now filter and clean the dataset using the following Python code
 
 ```
