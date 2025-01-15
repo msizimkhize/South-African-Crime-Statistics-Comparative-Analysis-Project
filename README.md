@@ -119,6 +119,9 @@ A comprehensive observation of the data reveals that serious crimes, of which hu
 
 Coupled with my experience in Statistics South Africa, as well as pure mathematics being my major, I would estimate that human trafficking remains a threat to South Africans, and is a severely under-reported event. South Africans who are more at risk to fall prey to this crime should be educated on ways to avoiding falling victim to abductions, and encouraged to report such crimes in their neighborhoods, knowing that all criminal reports are handled with utmost confidentiality.
 ***
+
+![](https://github.com/msizimkhize/South-African-Crime-Statistics-Comparative-Analysis-Project/blob/main/IMG/F7379CRZGZ4Z.jpeg?raw=true)
+
 ### Reach Out on LinkedIn
 
 [![](https://raw.githubusercontent.com/msizimkhize/-South-African-Crime-Statistics-Comparative-Analysis-Project/1f3d9ebec740ae97c9ac54fcd63315042bd8cc68/IMG/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c696e6b6564496e2d436f6e6e6563742d626c75653f7374796c653d666f722d7468652d6261646765266c6f676f3d6c696e6b6564696e.svg)](https://www.linkedin.com/in/msizimkhize/)
