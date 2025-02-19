@@ -1,4 +1,4 @@
-# South African Crime Statistics: Comparative Analysis
+# South African Crime Statistics: Comparative Analysis on Serious Crimes
 
 ![](https://github.com/msizimkhize/-South-African-Crime-Statistics-Comparative-Analysis-Project/blob/main/IMG/SAPS.png?raw=true)
 
