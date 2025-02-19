@@ -32,7 +32,18 @@ library(readr)
 crime_incidents_by_category <- read_csv("Downloads/crime_incidents_by_category.csv")
 View(crime_incidents_by_category) 
 ```
-![](https://github.com/msizimkhize/South-African-Crime-Statistics-Comparative-Analysis-Project/blob/main/IMG/1_uyEXe9u6BuJDCbXntketKQ.png?raw=true)
+|**501**|ZA|Other Serious Crimes|2011/2012|528296|
+|**502**|ZA|Other Serious Crimes|2012/2013|517252|
+|**503**|ZA|Other Serious Crimes|2013/2014|510748|
+|**504**|ZA|Other Serious Crimes|2014/2015|499698|
+|**505**|ZA|Other Serious Crimes|2015/2016|479075|
+|**506**|ZA|Other Serious Crimes|2016/2017|469276|
+|**507**|ZA|Other Serious Crimes|2017/2018|438113|
+|**508**|ZA|Other Serious Crimes|2018/2019|444447|
+|**509**|ZA|Other Serious Crimes|2019/2020|426569|
+|**510**|ZA|Other Serious Crimes|2020/2021|354566|
+|**751**|ZA|Other Serious Crimes|2021/2022|393821|
+|**776**|ZA|Other Serious Crimes|2022/2023|437038|
 
 The table is also obtained using the R code below.
 ```
