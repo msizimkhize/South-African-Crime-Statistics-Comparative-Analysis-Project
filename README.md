@@ -32,6 +32,8 @@ library(readr)
 crime_incidents_by_category <- read_csv("Downloads/crime_incidents_by_category.csv")
 View(crime_incidents_by_category) 
 ```
+|     |Geography|Crime Category|Financial Year|Count|
+|-----|-----|-----|-----|-----|
 |**501**|ZA|Other Serious Crimes|2011/2012|528296|
 |**502**|ZA|Other Serious Crimes|2012/2013|517252|
 |**503**|ZA|Other Serious Crimes|2013/2014|510748|
