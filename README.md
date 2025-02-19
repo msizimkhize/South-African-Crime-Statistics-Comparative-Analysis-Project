@@ -160,7 +160,15 @@ df2[["Count"]].describe()
 ***
 ### II) The dataset is visualised over the entire span of the 2011–2023 term (**Tableau**)
 
-![](https://github.com/msizimkhize/South-African-Crime-Statistics-Comparative-Analysis-Project/blob/main/IMG/1_mhBaXiczppWcKm6kfXsUog.png?raw=true)
+|Crime Category| |
+|-----|-----:|
+|**Aggrevated Robberies**|2,805,498|
+|**Contact Crimes**|14,641,294|
+|**Contact Related Crimes**|2,857,450|
+|**Crimes Detected as a Result of Police Action**|7,564,641|
+|**Other Serious Crimes**|10,997,798|
+|**Property Related Crimes**|11,733,250|
+|**Sexual Offences**|1,283,792|
 
 ![](https://github.com/msizimkhize/South-African-Crime-Statistics-Comparative-Analysis-Project/blob/main/IMG/1_6GeFBiJhKD6OGksRE1rSYw.png?raw=true)
 ***
