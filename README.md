@@ -146,7 +146,16 @@ df2 = pd.read_csv("crime_incidents_za.csv")
 df2[["Count"]].describe()
 ```
 
-![](https://github.com/msizimkhize/South-African-Crime-Statistics-Comparative-Analysis-Project/blob/main/IMG/400989899-80a272bb-5e37-4cd4-8508-3efaa0c59279.png?raw=true)
+|     |Count|
+|-----|-----:|
+|**count**|12.000000|
+|**mean**|458241.583333|
+|**std**|52542.650605|
+|**min**|354566.000000|
+|**25%**|434420.750000|
+|**50%**|456861.500000|
+|**75%**|502460.500000|
+|**max**|528296.000000|
 
 ***
 ### II) The dataset is visualised over the entire span of the 2011–2023 term (**Tableau**)
