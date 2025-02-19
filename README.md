@@ -105,7 +105,23 @@ df2 = pd.read_csv("crime_incidents_za.csv")
 #we preview the dataframe df2
 df2.head(15)
 ```
-![](https://github.com/msizimkhize/South-African-Crime-Statistics-Comparative-Analysis-Project/blob/main/IMG/7_04_08_42.png?raw=true)
+|     |Geography|Crime Category|Financial Year|Count|
+|-----|-----|-----|-----|-----|
+|**0**|ZA|Contact Crimes|2011/2012|615935|
+|**1**|ZA|Contact Crimes|2012/2013|608724|
+|**2**|ZA|Contact Crimes|2013/2014|611574|
+|**3**|ZA|Contact Crimes|2014/2015|616973|
+|**4**|ZA|Contact Crimes|2015/2016|623223|
+|**5**|ZA|Contact Crimes|2016/2017|608321|
+|**6**|ZA|Contact Crimes|2017/2018|601366|
+|**7**|ZA|Contact Crimes|2018/2019|617210|
+|**8**|ZA|Contact Crimes|2019/2020|621282|
+|**9**|ZA|Contact Crimes|2020/2021|535217|
+|**100**|ZA|Sexual Offences|2011/2012|60539|
+|**101**|ZA|Sexual Offences|2012/2013|60888|
+|**102**|ZA|Sexual Offences|2013/2014|56680|
+|**103**|ZA|Sexual Offences|2014/2015|53617|
+|**104**|ZA|Sexual Offences|2015/2016|51895|
 
 ```
 #outliers are removed
