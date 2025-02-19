@@ -1,4 +1,4 @@
-# South African Crime Statistics: Comparative Analysis on Serious Crimes
+# South African Crime Statistics: Comparative Analysis on Serious and Abduction-Related Crimes
 
 ![](https://github.com/msizimkhize/-South-African-Crime-Statistics-Comparative-Analysis-Project/blob/main/IMG/SAPS.png?raw=true)
 
@@ -121,7 +121,20 @@ df2 = pd.read_csv("crime_incidents_za.csv")
 #we preview the dataframe df2
 df2.head(15)
 ```
-![](https://github.com/msizimkhize/South-African-Crime-Statistics-Comparative-Analysis-Project/blob/main/IMG/7_04_08_42.png?raw=true)
+|     |Unnamed: 0|Crime Category|Count|
+|-----|-----|-----|-----|
+|**0**|0|Other Serious Crimes|528296|
+|**1**|1|Other Serious Crimes|517252|
+|**2**|2|Other Serious Crimes|510748|
+|**3**|3|Other Serious Crimes|499698|
+|**4**|4|Other Serious Crimes|479075|
+|**5**|5|Other Serious Crimes|469276|
+|**6**|6|Other Serious Crimes|438113|
+|**7**|7|Other Serious Crimes|444447|
+|**8**|8|Other Serious Crimes|426569|
+|**9**|9|Other Serious Crimes|354566|
+|**10**|10|Other Serious Crimes|393821|
+|**11**|11|Other Serious Crimes|437038|
 
 ```
 #outliers are removed
