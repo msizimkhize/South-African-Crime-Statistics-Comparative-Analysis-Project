@@ -4,9 +4,9 @@
 
 ***
 ## Abstract
-This is an evaluation of the latest human trafficking reports per province, against the major contributors of crime in South Africa.
+This is an evaluation of the latest human trafficking reports, inclusive of all South African provinces, with 'other serious crimes' as the decisive metric, against the major national categoric contributors of crime over the period 2011/2023.
 
-Alongside my vocational experience with Statistics South Africa, I was able to carry out the following investigation using South African Crime Statistics on Kaggle, R Studio, and Tableau.
+The investigation was conducted using the South African Crime Statistics dataset available on Kaggle, which was processed using R Studio, Python, BigQuery and Tableau.
 
 The data was prepared:
 
@@ -14,11 +14,7 @@ The data was prepared:
 - https://www.kaggle.com/datasets/harutyunagababyan/crime-stats-of-south-africa-2011-2023
 - Latest crime statistics
 
-The data is indeed limited, in that it only spans the eleven-year period. The data had to remain encrypted and entirely anonymous, as to ensure safety for the persons who reported the crimes herein contained.
-
-The data presented as a CSV is accessible and credible: R Studio was used for the purpose of preprocessing it.
-
-The data is provided on the South African crime statistics between the year 2011 and 2023. The parameters, by criterion, will be tabulated in this report, based on the nature and demographics of the crime.
+The data is indeed limited, in that it only spans the eleven-year period. The given dataset had been anonymised and the statistics numerised, as to ensure safety for the persons who reported the crimes contained. The dataset presented was readily accessible and highly credible. R Studio and BigQuery were used for the purpose of preprocessing it. The parameters, by criterion, will be tabulated in this report, based on the nature and demographics of the crime. Finally, the graphics were rendered on the Tableau environment.
 
 The data was processed as follows, so as to yield the desired visuals and information.
 ***
