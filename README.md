@@ -176,7 +176,9 @@ df2[["Count"]].describe()
 
 A comprehensive observation of the data reveals that serious crimes, of which human trafficking is implicated, are of the greatest contributors toward crime in South Africa. Overall, these numbers have remained rather steady, with a mild decline toward the latter phase.
 
-Coupled with my experience in Statistics South Africa, as well as pure mathematics being my major, I would estimate that human trafficking remains a threat to South Africans, and is a severely under-reported event. South Africans who are more at risk to fall prey to this crime should be educated on ways to avoiding falling victim to abductions, and encouraged to report such crimes in their neighborhoods, knowing that all criminal reports are handled with utmost confidentiality.
+Gicen the metric of serious crimes, over the fairly recent crime statistics, it is safe to conclude that human trafficking remains amongst the major threats to South Africans, and may be a severely under-reported event. South Africans who are more at risk to fall victims to this crime should be educated on ways to avoiding falling victim to abductions, and encouraged to report such crimes in their neighborhoods, knowing that all criminal reports are handled with utmost confidentiality. By consequence, what would have been a human traficking incident would become a crime combated by police action.
+
+The category of 'other serious crimes' showed a decline of crime reports by a fairly constant gradient from the year 2011 to the year 2018. The crime reports continued falling linearly, before reaching a fair upward climb at the 2022/2023 timeframe.
 ***
 
 ![](https://github.com/msizimkhize/South-African-Crime-Statistics-Comparative-Analysis-Project/blob/main/IMG/F7379CRZGZ4Z.jpeg?raw=true)
