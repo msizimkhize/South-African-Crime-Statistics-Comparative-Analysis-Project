@@ -58,7 +58,7 @@ df1 <- crime_incidents_by_category %>%
 
 head(df1, 12)
 ```
-We now filter and clean the dataset using the following Python code. All dependencies can be installed using the provided requirements.txt file via ```py -m pip install -r requirements.txt``` </span>).
+We now filter and clean the dataset using the following Python code. All dependencies can be installed using the provided requirements.txt file via ```py -m pip install -r requirements.txt``` </span>.
 ```
 import pandas as pd
 
