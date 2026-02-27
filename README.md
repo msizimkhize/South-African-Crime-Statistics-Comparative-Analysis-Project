@@ -20,12 +20,14 @@ The data was processed as follows, so as to yield the desired visuals and inform
 ***
 ### I) The data is tabulated annually against the category of the criminal offense
 
-In R Studio, we browse and manually filter the categorically South African (ZA) crimes
+In R Studio, we view and manually filter the categorically South African (ZA) crimes of the category 'Other Serious Crimes' using the GUI.
 
 ```
+install.packages("readr")
+
 library(readr)
 
-crime_incidents_by_category <- read_csv("Downloads/crime_incidents_by_category.csv")
+crime_incidents_by_category <- read_csv("crime_incidents_by_category.csv")
 View(crime_incidents_by_category) 
 ```
 |     |Geography|Crime Category|Financial Year|Count|
