@@ -10,10 +10,6 @@ The subject will be investigated on the provincial level, inclusive of all nine 
 
 The dataset on which the project is based, crime_incidents_by_category.csv, is included in this repository, as can be obtained from the following link: https://www.kaggle.com/datasets/harutyunagababyan/crime-stats-of-south-africa-2011-2023.
 
-- Zip folder containing dataset
-- 
-- Latest crime statistics
-
 The data is indeed limited, in that it only spans the eleven-year period. The given dataset had been anonymised and the statistics numerised, as to ensure safety for the persons who reported the crimes contained. The dataset presented was readily accessible and highly credible. R Studio and BigQuery were used for the purpose of preprocessing it. The parameters, by criterion, will be tabulated in this report, based on the nature and demographics of the crime. Finally, the graphics were rendered on the Tableau environment.
 
 The data was processed as follows, so as to yield the desired visuals and information.
