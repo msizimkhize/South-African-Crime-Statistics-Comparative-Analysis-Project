@@ -1,4 +1,4 @@
-# Gender-Based Violence in the South African Context: An Insight Driven Analysis
+# Gender-Based Violence in the South African Context: an Insight Driven Analysis
 
 ![](https://github.com/msizimkhize/-South-African-Crime-Statistics-Comparative-Analysis-Project/blob/main/IMG/SAPS.png?raw=true)
 
