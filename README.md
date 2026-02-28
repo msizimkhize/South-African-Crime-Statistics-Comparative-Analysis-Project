@@ -71,7 +71,7 @@ df[df["Geography"] == "ZA"]
 df.head(15)
 
 #we derive a new useful dataset
-df[df["Geography"] == "ZA"].to_csv("crime_incidents_za.csv")
+df[df["Geography"] == "ZA"].to_csv("crime_incidents_za.csv", index=False)
 
 #we now establish the new data frame
 df2 = pd.read_csv("crime_incidents_za.csv")
@@ -109,7 +109,7 @@ df2[df2["Crime Category"] == "Other Serious Crimes"].to_csv("crime_incidents_za.
 df2 = pd.read_csv("crime_incidents_za.csv")
 
 #we finally select the columns of special interest
-df2[["Crime Category", "Count"]].to_csv("crime_incidents_za.csv")
+df2[["Crime Category", "Count"]].to_csv("crime_incidents_za.csv", index=False)
 
 #we update the dataframe df2
 df2 = pd.read_csv("crime_incidents_za.csv")
@@ -117,20 +117,20 @@ df2 = pd.read_csv("crime_incidents_za.csv")
 #we preview the dataframe df2
 df2.head(15)
 ```
-|     |Unnamed: 0|Crime Category|Count|
-|-----|-----|-----|-----|
-|**0**|0|Other Serious Crimes|528296|
-|**1**|1|Other Serious Crimes|517252|
-|**2**|2|Other Serious Crimes|510748|
-|**3**|3|Other Serious Crimes|499698|
-|**4**|4|Other Serious Crimes|479075|
-|**5**|5|Other Serious Crimes|469276|
-|**6**|6|Other Serious Crimes|438113|
-|**7**|7|Other Serious Crimes|444447|
-|**8**|8|Other Serious Crimes|426569|
-|**9**|9|Other Serious Crimes|354566|
-|**10**|10|Other Serious Crimes|393821|
-|**11**|11|Other Serious Crimes|437038|
+|     |Crime Category|Count|
+|-----|-----|-----|
+|**0**|Other Serious Crimes|528296|
+|**1**|Other Serious Crimes|517252|
+|**2**|Other Serious Crimes|510748|
+|**3**|Other Serious Crimes|499698|
+|**4**|Other Serious Crimes|479075|
+|**5**|Other Serious Crimes|469276|
+|**6**|Other Serious Crimes|438113|
+|**7**|Other Serious Crimes|444447|
+|**8**|Other Serious Crimes|426569|
+|**9**|Other Serious Crimes|354566|
+|**10**|Other Serious Crimes|393821|
+|**11**|Other Serious Crimes|437038|
 
 ```
 #outliers are removed
