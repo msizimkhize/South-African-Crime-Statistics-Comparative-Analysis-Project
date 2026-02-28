@@ -4,15 +4,13 @@
 
 ***
 ## Abstract
-This is an evaluation of the South African crime statistics over 2011/2013 as it pertains to insights that can be obtained on gender based violence. The crime category, 'sexual offences' serves as the decisive metric, whilst the categories 'contact crimes' and 'contact-related crimes' will also be used to provide the bigger picture on the national crime state as it pertains to gender based violence. 
+This is an evaluation of the South African crime statistics over 2011/2013 as it pertains to insights that can be obtained on gender based violence. Gender based violence is essentially violence aggregated against an individual on the basis of their actual or perceived sex, and so the crime category, 'sexual offences' serves as the decisive metric, whilst the categories 'contact crimes' and 'contact-related crimes' will also be used to provide the bigger picture on the national crime state as it pertains to bodily violation, a significant facet of gender based violence. 
 
 The subject will be investigated on the provincial level, inclusive of all nine provinces, as well as on the national level. Insights drawn from the data analysis will finally be communicated.
 
 The dataset on which the project is based, crime_incidents_by_category.csv, is included in this repository, as can be obtained from the following link: https://www.kaggle.com/datasets/harutyunagababyan/crime-stats-of-south-africa-2011-2023.
 
-The data is indeed limited, in that it only spans the eleven-year period. The given dataset had been anonymised and the statistics numerised, as to ensure safety for the persons who reported the crimes contained. The dataset presented was readily accessible and highly credible. R Studio and BigQuery were used for the purpose of preprocessing it. The parameters, by criterion, will be tabulated in this report, based on the nature and demographics of the crime. Finally, the graphics were rendered on the Tableau environment.
-
-The data was processed as follows, so as to yield the desired visuals and information.
+The analysis proceeds as follows.
 ***
 ### I) The data is tabulated annually against the category of the criminal offense
 
