@@ -1,17 +1,17 @@
-# South African Crime Statistics: Comparative Analysis on Serious and Abduction-Related Crimes
+# Gender-Based Violence in the South African Context: An Insight Driven Analysis
 
 ![](https://github.com/msizimkhize/-South-African-Crime-Statistics-Comparative-Analysis-Project/blob/main/IMG/SAPS.png?raw=true)
 
 ***
 ## Abstract
-This is an evaluation of the latest human trafficking reports, inclusive of all South African provinces, with 'other serious crimes' as the decisive metric, against the major national categoric contributors of crime over the period 2011/2023.
+This is an evaluation of the South African crime statistics over 2011/2013 as it pertains to insights that can be obtained on gender based violence. The crime category, 'sexual offences' serves as the decisive metric, whilst the categories 'contact crimes' and 'contact-related crimes' will also be used to provide the bigger picture on the national crime state as it pertains to gender based violence. 
 
-The investigation was conducted using the South African Crime Statistics dataset available on Kaggle, which was processed using R Studio, Python, BigQuery and Tableau.
+The subject will be investigated on the provincial level, inclusive of all nine provinces, as well as on the national level. Insights drawn from the data analysis will finally be communicated.
 
-The data was prepared:
+The dataset on which the project is based, crime_incidents_by_category.csv, is included in this repository, as can be obtained from the following link: https://www.kaggle.com/datasets/harutyunagababyan/crime-stats-of-south-africa-2011-2023.
 
 - Zip folder containing dataset
-- https://www.kaggle.com/datasets/harutyunagababyan/crime-stats-of-south-africa-2011-2023
+- 
 - Latest crime statistics
 
 The data is indeed limited, in that it only spans the eleven-year period. The given dataset had been anonymised and the statistics numerised, as to ensure safety for the persons who reported the crimes contained. The dataset presented was readily accessible and highly credible. R Studio and BigQuery were used for the purpose of preprocessing it. The parameters, by criterion, will be tabulated in this report, based on the nature and demographics of the crime. Finally, the graphics were rendered on the Tableau environment.
@@ -71,7 +71,7 @@ df[df["Geography"] == "ZA"]
 df.head(15)
 
 #we derive a new useful dataset
-df[df["Geography"] == "ZA"].to_csv("crime_incidents_za.csv", index=False)
+df[df["Geography"] == "ZA"].to_csv("crime_incidents_za.csv")
 
 #we now establish the new data frame
 df2 = pd.read_csv("crime_incidents_za.csv")
@@ -109,7 +109,7 @@ df2[df2["Crime Category"] == "Other Serious Crimes"].to_csv("crime_incidents_za.
 df2 = pd.read_csv("crime_incidents_za.csv")
 
 #we finally select the columns of special interest
-df2[["Crime Category", "Count"]].to_csv("crime_incidents_za.csv", index=False)
+df2[["Crime Category", "Count"]].to_csv("crime_incidents_za.csv")
 
 #we update the dataframe df2
 df2 = pd.read_csv("crime_incidents_za.csv")
@@ -117,20 +117,20 @@ df2 = pd.read_csv("crime_incidents_za.csv")
 #we preview the dataframe df2
 df2.head(15)
 ```
-|     |Crime Category|Count|
-|-----|-----|-----|
-|**0**|Other Serious Crimes|528296|
-|**1**|Other Serious Crimes|517252|
-|**2**|Other Serious Crimes|510748|
-|**3**|Other Serious Crimes|499698|
-|**4**|Other Serious Crimes|479075|
-|**5**|Other Serious Crimes|469276|
-|**6**|Other Serious Crimes|438113|
-|**7**|Other Serious Crimes|444447|
-|**8**|Other Serious Crimes|426569|
-|**9**|Other Serious Crimes|354566|
-|**10**|Other Serious Crimes|393821|
-|**11**|Other Serious Crimes|437038|
+|     |Unnamed: 0|Crime Category|Count|
+|-----|-----|-----|-----|
+|**0**|0|Other Serious Crimes|528296|
+|**1**|1|Other Serious Crimes|517252|
+|**2**|2|Other Serious Crimes|510748|
+|**3**|3|Other Serious Crimes|499698|
+|**4**|4|Other Serious Crimes|479075|
+|**5**|5|Other Serious Crimes|469276|
+|**6**|6|Other Serious Crimes|438113|
+|**7**|7|Other Serious Crimes|444447|
+|**8**|8|Other Serious Crimes|426569|
+|**9**|9|Other Serious Crimes|354566|
+|**10**|10|Other Serious Crimes|393821|
+|**11**|11|Other Serious Crimes|437038|
 
 ```
 #outliers are removed
