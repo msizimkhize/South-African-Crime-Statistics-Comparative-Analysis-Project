@@ -18,6 +18,8 @@ The dataset is cleaned using the Python code below. All dependencies can be inst
 
 ```
 import pandas as pd
+from fuzzywuzzy import process
+import numpy as np
 
 #The dataset is loaded
 df = pd.read_csv("crime_incidents_by_category.csv")
@@ -28,15 +30,28 @@ print(df2.isnull().sum())
 
 #The dataset contains no null values
 
-#The data set is checked for duplicates
+#The dataset is checked for duplicates
 print(df2.duplicated().sum())
 
 #The dataset contains no duplicates
 
+#The columns are individually checked for null values
+null_count_geography = df2['Geography'].isnull().sum()
+print(f"Number of null values in column Geography: {null_count_geography}")
+
+null_count_crime_category = df['Crime Category'].isna().sum()
+print(f"Number of null values in Column Crime Category: {null_count_crime_category}")
+
+null_count_financial_year = df['Financial Year'].isnull().sum()
+print(f"Number of null values in Column Financial Year: {null_count_financial_year}")
+
+null_count_count = df['Count'].isna().sum()
+print(f"Number of null values in Column Count: {null_count_count}")
+
+#None of the columns contain null values
+
 #All possible misspelt occurences of the crime categories are rectified
 crime_categories = ["Contact Crimes", "Sexual Offences", "Aggravated Robberies", "Contact Related Crimes", "Property Related Crimes", "Other Serious Crimes", "Crimes Detected as a Result of Police Action"]
-
-from fuzzywuzzy import process
 
 def correct_spelling_fuzzy(word, dictionary, threshold=80):
     match, score = process.extractOne(word, dictionary)
