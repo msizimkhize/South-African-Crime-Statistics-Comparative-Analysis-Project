@@ -12,9 +12,37 @@ The dataset on which the project is based, crime_incidents_by_category.csv, is i
 
 The analysis proceeds as follows.
 ***
-### I) The data is tabulated annually against the category of the criminal offense
+### I) Data Cleaning
 
-In R Studio, we view and manually filter the categorically South African (ZA) crimes of the category 'Other Serious Crimes' using the GUI.
+The dataset is cleaned using the Python code below. All dependencies can be installed using the requirements.txt file included in the repository, via ```py -m pip install -r requirements.txt``` </span>.
+
+```
+import pandas as pd
+
+#The dataset is loaded
+df = pd.read_csv("crime_incidents_by_category.csv")
+df.head(15)
+
+#The null values are filtered out
+print(df2.isnull().sum())
+
+#The dataset contains no null values
+
+#filter rows based on location
+df[df["Geography"] == "ZA"]
+df.head(15)
+
+#we derive a new useful dataset
+df[df["Geography"] == "ZA"].to_csv("crime_incidents_za.csv", index=False)
+
+#we now establish the new data frame
+df2 = pd.read_csv("crime_incidents_za.csv")
+df2.head(15)
+
+#The null values are filtered out
+df2[df2.notnull()].head(15)
+df2[df2.notnull()].to_csv("crime_incidents_za.csv", index=False)
+```
 
 ```
 install.packages("readr")
