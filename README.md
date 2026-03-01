@@ -23,10 +23,18 @@ import pandas as pd
 df = pd.read_csv("crime_incidents_by_category.csv")
 df.head(15)
 
-#The null values are filtered out
+#The dataset is checked for null values
 print(df2.isnull().sum())
 
 #The dataset contains no null values
+
+#The data set is checked for duplicates
+print(df2.duplicated().sum())
+
+#The dataset contains no duplicates
+
+#The format for the financial year column is standardised
+df2['Financial Year'] = df2['Financial Year'].str.replace('-', '/')
 
 #filter rows based on location
 df[df["Geography"] == "ZA"]
