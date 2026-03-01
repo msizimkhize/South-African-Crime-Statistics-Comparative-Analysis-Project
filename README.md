@@ -33,6 +33,22 @@ print(df2.duplicated().sum())
 
 #The dataset contains no duplicates
 
+#All possible misspelt occurences of the crime categories are rectified
+crime_categories = ["Contact Crimes", "Sexual Offences", "Aggravated Robberies", "Contact Related Crimes", "Property Related Crimes", "Other Serious Crimes", "Crimes Detected as a Result of Police Action"]
+
+from fuzzywuzzy import process
+
+def correct_spelling_fuzzy(word, dictionary, threshold=80):
+    match, score = process.extractOne(word, dictionary)
+    if score >= threshold:
+        return match
+    else:
+        return word
+
+df2['Crime Category'] = df2['Crime Category'].apply(
+    lambda x: correct_spelling_fuzzy(x, crime_categories)
+)
+
 #The format for the financial year column is standardised
 df2['Financial Year'] = df2['Financial Year'].str.replace('-', '/')
 
