@@ -50,19 +50,37 @@ print(f"Number of null values in Column Count: {null_count_count}")
 
 #None of the columns contain null values
 
-#All possible misspelt occurences of the crime categories are rectified
+#The number of geographies that are not within the prescribed geographies are enumerated
+geographies = ["LIM", "KZN", "GT", "FS", "EC", "ZA", "WC", "NC", "MP", "NW"]
+
+count_not_in_geographies = (~df['Geography'].isin(geographies)).sum()
+
+print(f"The total number of invalid geography occurrences is: {count_not_in_geographies}")
+
+#There are no invalid geography occurences in the dataset
+
+#The number of crime categories that are not within the prescribed crime categories are enumerated
 crime_categories = ["Contact Crimes", "Sexual Offences", "Aggravated Robberies", "Contact Related Crimes", "Property Related Crimes", "Other Serious Crimes", "Crimes Detected as a Result of Police Action"]
 
-def correct_spelling_fuzzy(word, dictionary, threshold=80):
-    match, score = process.extractOne(word, dictionary)
-    if score >= threshold:
-        return match
-    else:
-        return word
+count_not_in_crime_categories = (~df['Crime Category'].isin(crime_categories)).sum()
 
-df2['Crime Category'] = df2['Crime Category'].apply(
-    lambda x: correct_spelling_fuzzy(x, crime_categories)
-)
+print(f"The total number of invalid crime category occurrences is: {count_not_in_crime_categories}")
+
+#There are no invalid crime category occurences in the dataset
+
+#The number of financial year entries that are not within the prescribed financial year entries are enumerated
+financial_year_entries = ["2011/2012", "2012/2013", "2013/2014", "2014/2015", "2015/2016", "2016/2017", "2017/2018", "2018/2019", "2019/2020", "2020/2021", "2021/2022", "2022/2023"]
+
+count_not_in_financial_year_entries = (~df['Financial Year'].isin(financial_year_entries)).sum()
+
+print(f"The total number of invalid financial year entries is: {count_not_in_financial_year_entries}")
+
+#There are no invalid financial year entries in the dataset
+
+
+
+
+
 
 #The format for the financial year column is standardised
 df2['Financial Year'] = df2['Financial Year'].str.replace('-', '/')
