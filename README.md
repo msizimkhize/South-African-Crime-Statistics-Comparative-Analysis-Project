@@ -87,6 +87,31 @@ print(f"The number of non-numeric entries is: {count_non_numeric}")
 
 #There no non-numeric count entries
 ```
+### I) Data Processing
+
+#Dataset containing desired metrics is created
+crime_categories_of_interest = ['Sexual Offences', 'Contact Crimes', 'Contact Related Crimes']
+df_crime_categories_of_interest = df2.loc[df2['Crime Category'].isin(crime_categories_of_interest)].copy()
+
+#The financial year values are set to their respective start years
+year_mapping_dict = {
+    "2011/2012" : '2011', 
+    "2012/2013" : '2012', 
+    "2013/2014" : '2013', 
+    "2014/2015" : '2014', 
+    "2015/2016" : '2015', 
+    "2016/2017" : '2016', 
+    "2017/2018" : '2017', 
+    "2018/2019" : '2018', 
+    "2019/2020" : '2019', 
+    "2020/2021" : '2020', 
+    "2021/2022" : '2021', 
+    "2022/2023" : '2022'
+}
+
+df_crime_categories_of_interest['Financial Year'] = df_crime_categories_of_interest['Financial Year'].replace(["2011/2012", "2012/2013", "2013/2014", "2014/2015", "2015/2016", "2016/2017", "2017/2018", "2018/2019", "2019/2020", "2020/2021", "2021/2022", "2022/2023"], [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]).astype(int)
+
+
 
 ```
 install.packages("readr")
