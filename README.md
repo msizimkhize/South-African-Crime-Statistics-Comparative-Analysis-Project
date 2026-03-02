@@ -1,117 +1,26 @@
-# Gender-Based Violence in the South African Context: an Insight Driven Analysis
+# South African Crime Statistics: Comparative Analysis on Serious and Abduction-Related Crimes
 
 ![](https://github.com/msizimkhize/-South-African-Crime-Statistics-Comparative-Analysis-Project/blob/main/IMG/SAPS.png?raw=true)
 
 ***
 ## Abstract
-This is an evaluation of the South African crime statistics over 2011/2013 as it pertains to insights that can be obtained on gender based violence. Gender based violence is essentially violence aggregated against an individual on the basis of their actual or perceived sex, and so the crime category, 'sexual offences' serves as the decisive metric, whilst the categories 'contact crimes' and 'contact-related crimes' will also be used to provide the bigger picture on the national crime state as it pertains to bodily violation, a significant facet of gender based violence. 
+This is an evaluation of the latest human trafficking reports, inclusive of all South African provinces, with 'other serious crimes' as the decisive metric, against the major national categoric contributors of crime over the period 2011/2023.
 
-The subject will be investigated on the provincial level, inclusive of all nine provinces, as well as on the national level. Insights drawn from the data analysis will finally be communicated.
+The investigation was conducted using the South African Crime Statistics dataset available on Kaggle, which was processed using R Studio, Python, BigQuery and Tableau.
 
-The dataset on which the project is based, crime_incidents_by_category.csv, is included in this repository, as can be obtained from the following link: https://www.kaggle.com/datasets/harutyunagababyan/crime-stats-of-south-africa-2011-2023.
+The data was prepared:
 
-The analysis proceeds as follows.
+- Zip folder containing dataset
+- https://www.kaggle.com/datasets/harutyunagababyan/crime-stats-of-south-africa-2011-2023
+- Latest crime statistics
+
+The data is indeed limited, in that it only spans the eleven-year period. The given dataset had been anonymised and the statistics numerised, as to ensure safety for the persons who reported the crimes contained. The dataset presented was readily accessible and highly credible. R Studio and BigQuery were used for the purpose of preprocessing it. The parameters, by criterion, will be tabulated in this report, based on the nature and demographics of the crime. Finally, the graphics were rendered on the Tableau environment.
+
+The data was processed as follows, so as to yield the desired visuals and information.
 ***
-### I) Data Cleaning
+### I) The data is tabulated annually against the category of the criminal offense
 
-The dataset is cleaned using the Python code below. All dependencies can be installed using the requirements.txt file included in the repository, via ```py -m pip install -r requirements.txt``` </span>.
-
-```
-import pandas as pd
-import numpy as np
-
-#The dataset is loaded
-df = pd.read_csv("crime_incidents_by_category.csv")
-df.head(15)
-
-#The dataset is checked for null values
-print(df2.isnull().sum())
-
-#The dataset contains no null values
-
-#The dataset is checked for duplicates
-print(df2.duplicated().sum())
-
-#The dataset contains no duplicates
-
-#The columns are individually checked for null values
-null_count_geography = df2['Geography'].isnull().sum()
-print(f"Number of null values in column Geography: {null_count_geography}")
-
-null_count_crime_category = df['Crime Category'].isna().sum()
-print(f"Number of null values in Column Crime Category: {null_count_crime_category}")
-
-null_count_financial_year = df['Financial Year'].isnull().sum()
-print(f"Number of null values in Column Financial Year: {null_count_financial_year}")
-
-null_count_count = df['Count'].isna().sum()
-print(f"Number of null values in Column Count: {null_count_count}")
-
-#None of the columns contain null values
-
-#The number of geographies that are not within the prescribed geographies are enumerated
-geographies = ["LIM", "KZN", "GT", "FS", "EC", "ZA", "WC", "NC", "MP", "NW"]
-
-count_not_in_geographies = (~df['Geography'].isin(geographies)).sum()
-
-print(f"The total number of invalid geography occurrences is: {count_not_in_geographies}")
-
-#There are no invalid geography occurences in the dataset
-
-#The number of crime categories that are not within the prescribed crime categories are enumerated
-crime_categories = ["Contact Crimes", "Sexual Offences", "Aggravated Robberies", "Contact Related Crimes", "Property Related Crimes", "Other Serious Crimes", "Crimes Detected as a Result of Police Action"]
-
-count_not_in_crime_categories = (~df['Crime Category'].isin(crime_categories)).sum()
-
-print(f"The total number of invalid crime category occurrences is: {count_not_in_crime_categories}")
-
-#There are no invalid crime category occurences in the dataset
-
-#The number of financial year entries that are not within the prescribed financial year entries are enumerated
-financial_year_entries = ["2011/2012", "2012/2013", "2013/2014", "2014/2015", "2015/2016", "2016/2017", "2017/2018", "2018/2019", "2019/2020", "2020/2021", "2021/2022", "2022/2023"]
-
-count_not_in_financial_year_entries = (~df['Financial Year'].isin(financial_year_entries)).sum()
-
-print(f"The total number of invalid financial year entries is: {count_not_in_financial_year_entries}")
-
-#There are no invalid financial year entries in the dataset
-
-#The number of count entries that are not numerals are enumerated
-coerced_series = pd.to_numeric(df2['Count'], errors='coerce')
-
-non_numeric_mask = coerced_series.isna()
-
-count_non_numeric = non_numeric_mask.sum()
-
-print(f"The number of non-numeric entries is: {count_non_numeric}")
-
-#There no non-numeric count entries
-```
-### I) Data Processing
-
-#Dataset containing desired metrics is created
-crime_categories_of_interest = ['Sexual Offences', 'Contact Crimes', 'Contact Related Crimes']
-df_crime_categories_of_interest = df2.loc[df2['Crime Category'].isin(crime_categories_of_interest)].copy()
-
-#The financial year values are set to their respective start years
-year_mapping_dict = {
-    "2011/2012" : '2011', 
-    "2012/2013" : '2012', 
-    "2013/2014" : '2013', 
-    "2014/2015" : '2014', 
-    "2015/2016" : '2015', 
-    "2016/2017" : '2016', 
-    "2017/2018" : '2017', 
-    "2018/2019" : '2018', 
-    "2019/2020" : '2019', 
-    "2020/2021" : '2020', 
-    "2021/2022" : '2021', 
-    "2022/2023" : '2022'
-}
-
-df_crime_categories_of_interest['Financial Year'] = df_crime_categories_of_interest['Financial Year'].replace(["2011/2012", "2012/2013", "2013/2014", "2014/2015", "2015/2016", "2016/2017", "2017/2018", "2018/2019", "2019/2020", "2020/2021", "2021/2022", "2022/2023"], [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]).astype(int)
-
-
+In R Studio, we view and manually filter the categorically South African (ZA) crimes of the category 'Other Serious Crimes' using the GUI.
 
 ```
 install.packages("readr")
@@ -162,7 +71,7 @@ df[df["Geography"] == "ZA"]
 df.head(15)
 
 #we derive a new useful dataset
-df[df["Geography"] == "ZA"].to_csv("crime_incidents_za.csv")
+df[df["Geography"] == "ZA"].to_csv("crime_incidents_za.csv", index=False)
 
 #we now establish the new data frame
 df2 = pd.read_csv("crime_incidents_za.csv")
@@ -200,7 +109,7 @@ df2[df2["Crime Category"] == "Other Serious Crimes"].to_csv("crime_incidents_za.
 df2 = pd.read_csv("crime_incidents_za.csv")
 
 #we finally select the columns of special interest
-df2[["Crime Category", "Count"]].to_csv("crime_incidents_za.csv")
+df2[["Crime Category", "Count"]].to_csv("crime_incidents_za.csv", index=False)
 
 #we update the dataframe df2
 df2 = pd.read_csv("crime_incidents_za.csv")
@@ -208,20 +117,20 @@ df2 = pd.read_csv("crime_incidents_za.csv")
 #we preview the dataframe df2
 df2.head(15)
 ```
-|     |Unnamed: 0|Crime Category|Count|
-|-----|-----|-----|-----|
-|**0**|0|Other Serious Crimes|528296|
-|**1**|1|Other Serious Crimes|517252|
-|**2**|2|Other Serious Crimes|510748|
-|**3**|3|Other Serious Crimes|499698|
-|**4**|4|Other Serious Crimes|479075|
-|**5**|5|Other Serious Crimes|469276|
-|**6**|6|Other Serious Crimes|438113|
-|**7**|7|Other Serious Crimes|444447|
-|**8**|8|Other Serious Crimes|426569|
-|**9**|9|Other Serious Crimes|354566|
-|**10**|10|Other Serious Crimes|393821|
-|**11**|11|Other Serious Crimes|437038|
+|     |Crime Category|Count|
+|-----|-----|-----|
+|**0**|Other Serious Crimes|528296|
+|**1**|Other Serious Crimes|517252|
+|**2**|Other Serious Crimes|510748|
+|**3**|Other Serious Crimes|499698|
+|**4**|Other Serious Crimes|479075|
+|**5**|Other Serious Crimes|469276|
+|**6**|Other Serious Crimes|438113|
+|**7**|Other Serious Crimes|444447|
+|**8**|Other Serious Crimes|426569|
+|**9**|Other Serious Crimes|354566|
+|**10**|Other Serious Crimes|393821|
+|**11**|Other Serious Crimes|437038|
 
 ```
 #outliers are removed
