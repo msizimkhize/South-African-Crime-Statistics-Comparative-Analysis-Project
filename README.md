@@ -18,7 +18,6 @@ The dataset is cleaned using the Python code below. All dependencies can be inst
 
 ```
 import pandas as pd
-from fuzzywuzzy import process
 import numpy as np
 
 #The dataset is loaded
@@ -77,28 +76,16 @@ print(f"The total number of invalid financial year entries is: {count_not_in_fin
 
 #There are no invalid financial year entries in the dataset
 
+#The number of count entries that are not numerals are enumerated
+coerced_series = pd.to_numeric(df2['Count'], errors='coerce')
 
+non_numeric_mask = coerced_series.isna()
 
+count_non_numeric = non_numeric_mask.sum()
 
+print(f"The number of non-numeric entries is: {count_non_numeric}")
 
-
-#The format for the financial year column is standardised
-df2['Financial Year'] = df2['Financial Year'].str.replace('-', '/')
-
-#filter rows based on location
-df[df["Geography"] == "ZA"]
-df.head(15)
-
-#we derive a new useful dataset
-df[df["Geography"] == "ZA"].to_csv("crime_incidents_za.csv", index=False)
-
-#we now establish the new data frame
-df2 = pd.read_csv("crime_incidents_za.csv")
-df2.head(15)
-
-#The null values are filtered out
-df2[df2.notnull()].head(15)
-df2[df2.notnull()].to_csv("crime_incidents_za.csv", index=False)
+#There no non-numeric count entries
 ```
 
 ```
